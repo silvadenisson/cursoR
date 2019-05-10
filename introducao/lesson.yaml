@@ -1,6 +1,6 @@
 - Class: meta
-  Course: fixacao
-  Lesson: introducao
+  Course: fixação
+  Lesson: introdução
   Author: Dr. Denisson Silva
   Type: Standard
   Organization: UFMG
@@ -8,7 +8,7 @@
 
 
 - Class: text
-  Output: bem vindo ao seu teste, presione enter para iniciar.
+  Output: Bem vind@ ao exercício de fixação, presione enter para iniciar.
   
 - Class: cmd_question
   Output: adicione 2 e 2 usando usando o operador de soma.
