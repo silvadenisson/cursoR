@@ -1,0 +1,23 @@
+- Class: meta
+  Course: prova
+  Lesson: introducao
+  Author: Dr. Denisson Silva
+  Type: Standard
+  Organization: UFMG
+  Version: 2.4.4
+
+
+- Class: text
+  Output: bem vindo ao seu teste, presione enter para iniciar.
+  
+- Class: cmd_question
+  Output: adicione 2 e 2 usando usando o operador de soma.
+  CorrectAnswer: 2 + 2
+  AnswerTests: omnitest(correctExpr='2 + 2')
+  Hint: justamente 2 + 2.  
+
+- Class: cmd_question
+  Output: subtraia 2 de 5 usando usando o operador de subtração.
+  CorrectAnswer: 2 - 5
+  AnswerTests: omnitest(correctExpr='2 - 5')
+  Hint: justamente 2 - 5.  
