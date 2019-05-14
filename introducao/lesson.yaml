@@ -34,7 +34,6 @@
   AnswerTests: omnitest(correctExpr='15 / 3')
   Hint: justamente 15 / 3.    
 
-
 - Class: cmd_question
   Output: extraia a raiz quadrada de 64 usando usando a função "square root".
   CorrectAnswer: sqrt(64)
