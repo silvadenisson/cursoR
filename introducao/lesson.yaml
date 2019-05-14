@@ -55,8 +55,8 @@
 - Class: cmd_question
   Output: Crie um vetor de 20 a 1 e salve no objeto b.
   CorrectAnswer: b <- 20:1
-  AnswerTests: omnitest(correctExpr='a <- 20:1')
-  Hint: Just type a <- 20:1. 
+  AnswerTests: omnitest(correctExpr='b <- 20:1')
+  Hint: Just type b <- 20:1. 
 
 - Class: cmd_question
   Output: Crie um vetor de 1 a 50 e 49 a 1 e salve no objeto c.
@@ -103,15 +103,21 @@
   AnswerTests: omnitest(correctExpr='x <- c(1, 4, 7, 9, 2)');expr_creates_var('x')
   Hint: exatamente x <- c(1, 4, 7, 9, 2).
 
-- Class: divida por 2 o vetor x recem criado
+- Class: cmd_question
+  Output: divida por 2 o vetor x recem criado
   CorrectAnswer: x/2
   AnswerTests: omnitest(correctExpr='x/2')
   Hint: exatamente x/2. 
  
+- Class: cmd_question
+  Output: eleve ao quadrado o vetor x
+  CorrectAnswer: x^2
+  AnswerTests: omnitest(correctExpr='x^2')
+  Hint: exatamente x^2. 
 
 
 - Class: cmd_question
   Output: Calcule a médio do vetor c(2, 5, 7, 7)
   CorrectAnswer: mean(c(2,5,7,7))
   AnswerTests: omnitest(correctExpr='mean(c(2,5,7,7))')
-  Hint: exatamente meand(c(2,5,7,7))
+  Hint: exatamente mean(c(2,5,7,7))
