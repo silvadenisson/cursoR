@@ -22,25 +22,25 @@
   AnswerTests: omnitest(correctExpr='2 - 5')
   Hint: justamente 2 - 5.  
 
- - Class: cmd_question
+- Class: cmd_question
   Output: multiplique 3 de 7 usando usando o operador de multiplicação.
   CorrectAnswer: 3 * 7
   AnswerTests: omnitest(correctExpr='3 * 7')
   Hint: justamente 3 * 7.   
 
- - Class: cmd_question
+- Class: cmd_question
   Output: divida 15 de 3 usando usando o operador de divisão.
   CorrectAnswer: 15 / 3
   AnswerTests: omnitest(correctExpr='15 / 3')
   Hint: justamente 15 / 3.    
 
 
-   - Class: cmd_question
+- Class: cmd_question
   Output: extraia a raiz quadrada de 64 usando usando a função "square root".
   CorrectAnswer: sqrt(64)
   AnswerTests: omnitest(correctExpr='sqrt(64)')
   Hint: justamente 3 * 7.    
-  
+
 - Class: cmd_question
   Output: Calcule a médio do vetor c(2, 5, 7, 7)
   CorrectAnswer: mean(c(2,5,7,7))
