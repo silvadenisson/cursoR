@@ -110,14 +110,133 @@
   Hint: exatamente x/2. 
  
 - Class: cmd_question
-  Output: eleve ao quadrado o vetor x
+  Output: eleve ao quadrado os elmentos do vetor x
   CorrectAnswer: x^2
   AnswerTests: omnitest(correctExpr='x^2')
   Hint: exatamente x^2. 
 
+- Class: cmd_question
+  Output: extraia a raiz quadrada dos elementos do vetor x
+  CorrectAnswer: sqrt(x)
+  AnswerTests: omnitest(correctExpr='sqrt(x)')
+  Hint: exatamente sqrt(x). 
+  
+- Class: cmd_question
+  Output: selecione (faça o subsetting) do elemento que está na segunda posição do vetor x
+  CorrectAnswer: x[2]
+  AnswerTests: omnitest(correctExpr='x[2]')
+  Hint: exatamente x[2]. 
 
 - Class: cmd_question
-  Output: Calcule a médio do vetor c(2, 5, 7, 7)
-  CorrectAnswer: mean(c(2,5,7,7))
-  AnswerTests: omnitest(correctExpr='mean(c(2,5,7,7))')
-  Hint: exatamente mean(c(2,5,7,7))
+  Output: selecione os elementos que estão na posição 1 e 3 do vetor x
+  CorrectAnswer: x[c(1, 3)]
+  AnswerTests: omnitest(correctExpr='x[c(1, 3)]')
+  Hint: exatamente x[c(1, 3)]. 
+
+- Class: cmd_question
+  Output: selecione todos elementos menos o que está na posição 3 do vetor x
+  CorrectAnswer: x[c(-3)]
+  AnswerTests: omnitest(correctExpr='x[c(-3)]')
+  Hint: exatamente x[c(-3)].  
+
+- Class: cmd_question
+  Output: selecione todos elementos menos os que estão na posição 2 e 4 do vetor x
+  CorrectAnswer: x[-c(2, 4))]
+  AnswerTests: omnitest(correctExpr='x[-c(2, 4)]')
+  Hint: exatamente x[-c(2, 4)].  
+
+- Class: cmd_question
+  Output: faça um teste se os valores dos elmentos do vetor x são iguais 4
+  CorrectAnswer: x==4
+  AnswerTests: omnitest(correctExpr='x==4')
+  Hint: exatamente x==4. 
+
+- Class: cmd_question
+  Output: selecione o(s) elemento(s) que seu valor é igual a 4 do vetor x
+  CorrectAnswer: x[x==4]
+  AnswerTests: omnitest(correctExpr='x[x==4]')
+  Hint: exatamente x[x==4]. 
+
+- Class: cmd_question
+  Output: selecione o(s) elemento(s) que seu valor é diferente de 7 do vetor x
+  CorrectAnswer: x[x!=7]
+  AnswerTests: omnitest(correctExpr='x[x!=7]')
+  Hint: exatamente x[x!=7]. 
+
+- Class: cmd_question
+  Output: selecione o(s) elemento(s) que seu valor é maior que 3 do vetor x
+  CorrectAnswer: x[x>3]
+  AnswerTests: omnitest(correctExpr='x[x>3]')
+  Hint: exatamente x[x>3]. 
+
+- Class: cmd_question
+  Output: crie o vetor y <- c(2, 5, 7, 7, 8)
+  CorrectAnswer: y <- c(2, 5, 7, 7, 8)
+  AnswerTests: omnitest(correctExpr='y <- c(2, 5, 7, 7, 8)');expr_creates_var('y')
+  Hint: exatamente y <- c(2, 5, 7, 7).
+
+- Class: cmd_question
+  Output: Calcule a média do vetor y
+  CorrectAnswer: mean(y)
+  AnswerTests: omnitest(correctExpr='mean(y)')
+  Hint: exatamente mean(y)
+
+- Class: cmd_question
+  Output: Calcule a soma dos elementos do vetor y
+  CorrectAnswer: sum(y)
+  AnswerTests: omnitest(correctExpr='sum(y)')
+  Hint: exatamente sum(y) 
+
+- Class: cmd_question
+  Output: Calcule o desvio padrão dos elementos do vetor y
+  CorrectAnswer: sd(y)
+  AnswerTests: omnitest(correctExpr='sd(y)')
+  Hint: exatamente sd(y)  
+
+- Class: cmd_question
+  Output: Identidique o tamanho do vetor y
+  CorrectAnswer: length(y)
+  AnswerTests: omnitest(correctExpr='length(y)')
+  Hint: exatamente length(y)  
+
+- Class: cmd_question
+  Output: Identidique a mediana do vetor y
+  CorrectAnswer: median(y)
+  AnswerTests: omnitest(correctExpr='median(y)')
+  Hint: exatamente median(y)  
+
+- Class: cmd_question
+  Output: crie o vetor t_missing com os seguinte elementos 25, 15, NA, 50, NA, 18
+  CorrectAnswer: t_missing <- c(25, 15, NA, 50, NA, 18)
+  AnswerTests: omnitest(correctExpr='t_missing <- c(25, 15, NA, 50, NA, 18)');expr_creates_var('t_missing')
+  Hint: exatamente t_missing <- c(25, 15, NA, 50, NA, 18).
+
+- Class: cmd_question
+  Output: crie o vetor s_missing aplicando a funcao is.na para selecionar os valores que nao sao missing
+  CorrectAnswer: s_missing <- t_missing[!is.na(t_missing)]
+  AnswerTests: omnitest(correctExpr='s_missing <- t_missing[!is.na(t_missing)]');expr_creates_var('s_missing')
+  Hint: exatamente s_missing <- t_missing[!is.na(t_missing)].
+
+- Class: cmd_question
+  Output: Calcule a média do vetor s_missing
+  CorrectAnswer: mean(s_missing)
+  AnswerTests: omnitest(correctExpr='mean(s_missing)')
+  Hint: exatamente mean(s_missing) 
+
+- Class: cmd_question
+  Output: use a funcao help  para saber como calcula a média quando há algum valor missing
+  CorrectAnswer: help("mean")
+  AnswerTests: omnitest(correctExpr='help("mean")')
+  Hint: exatamente help("mean") 
+
+- Class: cmd_question
+  Output: agora calcule a média do vetor t_missing
+  CorrectAnswer: mean(t_missing, na.rm = TRUE)
+  AnswerTests: omnitest(correctExpr='mean(t_missing, na.rm = TRUE)')
+  Hint: exatamente mean(t_missing, na.rm = TRUE)
+
+- Class: cmd_question
+  Output: agora calcule o desvio padrão do vetor t_missing
+  CorrectAnswer: sd(t_missing, na.rm = TRUE)
+  AnswerTests: omnitest(correctExpr='sd(t_missing, na.rm = TRUE)')
+  Hint: exatamente sd(t_missing, na.rm = TRUE)
