@@ -8,4 +8,4 @@ Para fazer o cursoR, é necessário:
 4. iniciar o swirl e iniciar o curso,  ```swirl()```;
 
 **Observação:**
-o swirl é por padrão em inglês, embora o cursoR seja desenvolvido em português as instrucões estão em inglês. Mas é possível traduzir o swirl usando a função```select_language()```
+o swirl é por padrão em inglês, embora o cursoR seja desenvolvido em português as instruções estão em inglês. Mas é possível traduzir o swirl usando a função```select_language()```
