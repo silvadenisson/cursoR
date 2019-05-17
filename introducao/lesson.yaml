@@ -50,49 +50,49 @@
   Output: Crie um vetor de 1 a 20 e salve no objeto a.
   CorrectAnswer: a <- 1:20
   AnswerTests: omnitest(correctExpr='a <- 1:20')
-  Hint: Just type a <- 1:20.
+  Hint: exatamente a <- 1:20.
 
 - Class: cmd_question
   Output: Crie um vetor de 20 a 1 e salve no objeto b.
   CorrectAnswer: b <- 20:1
   AnswerTests: omnitest(correctExpr='b <- 20:1')
-  Hint: Just type b <- 20:1. 
+  Hint: exatamente b <- 20:1. 
 
 - Class: cmd_question
   Output: Crie um vetor de 1 a 50 e 49 a 1 e salve no objeto c.
   CorrectAnswer: c <- c(1:50, 49:1)
   AnswerTests: omnitest(correctExpr='c <- c(1:50, 49:1)')
-  Hint: Just type c <- c(1:50, 49:1).  
+  Hint: exatamente c <- c(1:50, 49:1).  
 
 - Class: cmd_question
   Output: Crie um vetor character (texto) no objeto "e", com as seguintes frutas "manga", "goiaba", "laranja", "ciriguela".
   CorrectAnswer: e <- c("manga", "goiaba", "laranja", "ciriguela")
   AnswerTests: omnitest(correctExpr='e <- c("manga", "goiaba", "laranja", "ciriguela")')
-  Hint: Just type e <- c("manga", "goiaba", "laranja", "ciriguela").  
+  Hint: exatamente e <- c("manga", "goiaba", "laranja", "ciriguela").  
 
 - Class: cmd_question
   Output: Crie um vetor lógico no objeto "h", com os seguintes TRUE, FALSE, FALSE, TRUE, FALSE.
   CorrectAnswer: h <- c(TRUE, FALSE, FALSE, TRUE, FALSE)
   AnswerTests: omnitest(correctExpr='h <- c(TRUE, FALSE, FALSE, TRUE, FALSE)')
-  Hint: Just type h <- c(TRUE, FALSE, FALSE, TRUE, FALSE). 
+  Hint: exatamente h <- c(TRUE, FALSE, FALSE, TRUE, FALSE). 
 
 - Class: cmd_question
   Output: Crie um vetor numerico "i", com os seguintes 3.1416, 2.71, 1.666, 5
   CorrectAnswer: i <- c(3.1416, 2.71, 1.666, 5)
   AnswerTests: omnitest(correctExpr='i <- c(3.1416, 2.71, 1.666, 5)')
-  Hint: Just type i <- c(3.1416, 2.71, 1.666, 5). 
+  Hint: exatamente i <- c(3.1416, 2.71, 1.666, 5). 
 
 - Class: cmd_question
   Output: Crie um vetor "k", com os seguintes "l", "m", "n", 1, 3, 4 
   CorrectAnswer: k <- c("l", "m", "n", 1, 3, 4 )
   AnswerTests: omnitest(correctExpr='k <- c("l", "m", "n", 1, 3, 4)')
-  Hint: Just type k <- c("l", "m", "n", 1, 3, 4).   
+  Hint: exatamente k <- c("l", "m", "n", 1, 3, 4).   
 
 - Class: cmd_question
   Output: Crie um vetor numerico "m", onde a sequencia 1,2,3 repete 10 vezes
   CorrectAnswer: m <- rep(c(1:3), 10)
-  AnswerTests: omnitest(correctExpr='m <- rep(c(1:3), 10)')
-  Hint: Just type m <- rep(c(1:3), 10).         
+  AnswerTests: any_of_exprs('m <- rep(c(1:3), 10)', 'm <- rep(c(1, 2, 3), 10')
+  Hint: exatamente m <- rep(c(1:3), 10).   
 
 - Class: text
   Output: Agora vamos trabalhar com vetores, operações e subsetting.
@@ -135,9 +135,9 @@
 
 - Class: cmd_question
   Output: selecione todos elementos menos o que está na posição 3 do vetor x
-  CorrectAnswer: x[c(-3)]
-  AnswerTests: omnitest(correctExpr='x[c(-3)]')
-  Hint: exatamente x[c(-3)].  
+  CorrectAnswer: x[-3]
+  AnswerTests: omnitest(correctExpr='x[-3]')
+  Hint: exatamente x[-3].  
 
 - Class: cmd_question
   Output: selecione todos elementos menos os que estão na posição 2 e 4 do vetor x
@@ -214,7 +214,7 @@
 - Class: cmd_question
   Output: crie o vetor s_missing aplicando a funcao is.na para selecionar os valores que nao sao missing
   CorrectAnswer: s_missing <- t_missing[!is.na(t_missing)]
-  AnswerTests: omnitest(correctExpr='s_missing <- t_missing[!is.na(t_missing)]');expr_creates_var('s_missing')
+  AnswerTests: omnitest(correctExpr='s_missing <- t_missing[!is.na(t_missing)]')
   Hint: exatamente s_missing <- t_missing[!is.na(t_missing)].
 
 - Class: cmd_question
